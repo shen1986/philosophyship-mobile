@@ -1,0 +1,23 @@
+/*
+ * @Author: Shenxf 
+ * @Date: 2019-06-23 22:56:56 
+ * @Last Modified by: Shenxf
+ * @Last Modified time: 2019-06-23 23:08:27
+ */
+
+/* 内容区 */
+.tt-content {
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: auto;
+    height: 100%;
+}
+
+/* 根据header和navbar自动适应内容区高度 */
+.tt-header~.tt-content {
+    padding-top: 2.3rem;
+}
+
+.tt-navbar~.tt-content {
+    padding-bottom: 2.5rem;
+}
