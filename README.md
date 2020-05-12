@@ -3,7 +3,7 @@ philosophship-mobile 手机端H5 ui 框架
 
 ## 项目介绍
 
-tuitui-ui，由推推科技开发的UI样式库。微信关注推推优品，回复“ui”即可获得项目的预览地址。
+philosophship-mobile，由推推科技开发的UI样式库。微信关注推推优品，回复“ui”即可获得项目的预览地址。
 
 ![](http://ui.tuituitech.com/demo/img/modal-test.jpg)
 
