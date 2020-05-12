@@ -1,3 +1,4 @@
+import './mask.less'
 import React from 'react'
 
 const Mask = () => {

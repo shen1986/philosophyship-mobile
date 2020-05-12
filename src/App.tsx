@@ -3,7 +3,8 @@ import './styles/index.less'
 import React from 'react'
 // import ButtonPage from './pages/buttonPage'
 // import SearchPage from './pages/searchPage'
-import ListPage from './pages/listPage'
+// import ListPage from './pages/listPage'
+import GridPage from './pages/gridPage'
 
 import {
     BrowserRouter as Router,
@@ -16,7 +17,8 @@ function App() {
             
             {/* <ButtonPage /> */}
             {/* <SearchPage /> */}
-            <ListPage />
+            {/* <ListPage /> */}
+            <GridPage />
         </Router>
     );
 }
