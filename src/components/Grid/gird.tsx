@@ -1,45 +1,55 @@
 import './grid.less'
-import React from 'react'
-const Grid = () => {
+import React, {
+    FC,
+} from 'react'
+import classNames from 'classnames'
+
+interface GridItem {
+    key: string
+    icon: React.ReactNode
+    label: string
+}
+
+interface IGridProps {
+    gridItem: GridItem[]
+    gridCol?: 2 | 3 | 4 | 5 
+    onClick?: (key: string) => void
+    noBorder?: boolean
+}
+
+const Grid: FC<IGridProps> = props => {
+    const {
+        gridItem,
+        gridCol = 3,
+        onClick,
+        noBorder = false,
+    } = props
+
+
+
     return (
         // <!-- 九宫格 -->
-        <div className="tt-grid tt-grid-2 no-border">
-            <div className="tt-grid-item">
-                <i className="fa fa-area-chart tt-grid-icon"></i>
-                <p className="tt-grid-label">格子1</p>
-            </div>
-            <div className="tt-grid-item">
-                <i className="fa fa-area-chart tt-grid-icon"></i>
-                <p className="tt-grid-label">格子2</p>
-            </div>
-            <div className="tt-grid-item">
-                <i className="fa fa-bar-chart tt-grid-icon"></i>
-                <p className="tt-grid-label">格子3</p>
-            </div>
-            <div className="tt-grid-item">
-                <i className="fa fa-area-chart tt-grid-icon"></i>
-                <p className="tt-grid-label">格子4</p>
-            </div>
-            <div className="tt-grid-item">
-                <i className="fa fa-area-chart tt-grid-icon"></i>
-                <p className="tt-grid-label">格子5</p>
-            </div>
-            <div className="tt-grid-item">
-                <i className="fa fa-bar-chart tt-grid-icon"></i>
-                <p className="tt-grid-label">格子6</p>
-            </div>
-            <div className="tt-grid-item">
-                <i className="fa fa-area-chart tt-grid-icon"></i>
-                <p className="tt-grid-label">格子7</p>
-            </div>
-            <div className="tt-grid-item">
-                <i className="fa fa-area-chart tt-grid-icon"></i>
-                <p className="tt-grid-label">格子8</p>
-            </div>
-            <div className="tt-grid-item">
-                <i className="fa fa-bar-chart tt-grid-icon"></i>
-                <p className="tt-grid-label">格子9</p>
-            </div>
+        <div className={classNames("tt-grid",
+            {"no-border": noBorder},
+            { [`tt-grid-${gridCol}`]: gridCol !== 3}
+        )}>
+            {gridItem.map(item => {
+                const handleClick = (key: string) => {
+                    if (onClick) {
+                        onClick(key)
+                    }
+                }
+                return (
+                    <div
+                        key={item.key}
+                        className="tt-grid-item"
+                        onClick={() => handleClick(item.key)}
+                    >
+                        <div className="tt-grid-icon">{item.icon}</div>
+                        <p className="tt-grid-label">{item.label}</p>
+                    </div>
+                )
+            })}
         </div>
     )
 }
