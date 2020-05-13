@@ -4,8 +4,8 @@ import React from 'react'
 // import ButtonPage from './pages/buttonPage'
 // import SearchPage from './pages/searchPage'
 // import ListPage from './pages/listPage'
-// import GridPage from './pages/gridPage'
-import MenuPage from './pages/menuPage'
+import GridPage from './pages/gridPage'
+// import MenuPage from './pages/menuPage'
 
 import {
     BrowserRouter as Router,
@@ -19,8 +19,8 @@ function App() {
             {/* <ButtonPage /> */}
             {/* <SearchPage /> */}
             {/* <ListPage /> */}
-            {/* <GridPage /> */}
-            <MenuPage />
+            <GridPage />
+            {/* <MenuPage /> */}
         </Router>
     );
 }

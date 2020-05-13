@@ -1,7 +1,7 @@
 import React from 'react'
-import Content from '../components/Content/content'
-import Panel from '../components/Panel/panel'
-import Button from '../components/Button/button'
+import Content from '@/components/Content/content'
+import Panel from '@/components/Panel/panel'
+import Button from '@/components/Button/button'
 
 
 function ButtonPage() {
